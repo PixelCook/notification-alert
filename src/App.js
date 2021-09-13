@@ -1,11 +1,30 @@
-import React from "react";
+import axios from "axios";
+import React, { useEffect } from "react";
 import './App.css';
 
 function App() {
+  const[notifications, setNotifications] = useEffect([]);
+
   const closeNotification = () => {
     // send userID, notification type
     console.log("hey")
-  }
+  };
+
+  useEffect(() => {
+    async function loadData() {
+      try {
+        const response = await axios.get("/content")
+
+      }
+      catch (error){
+        console.log(error)
+      }
+      finally{
+        console.log("results have loaded")
+      }
+    }
+    loadData();
+  }, [])
 
   return (
   <div className="main">
