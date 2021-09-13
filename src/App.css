@@ -1,38 +1,61 @@
-.App {
-  text-align: center;
-}
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Mulish:wght@300&display=swap');
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.main{
+  margin: auto;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 2rem;
+  background-color: white;
+  height: 100vh;
+  width: 80%;
 }
 
-.App-link {
-  color: #61dafb;
+h1{
+  font-family: 'Archivo Black', sans-serif;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+p{
+  font-family: 'Mulish', sans-serif;
+}
+
+button{
+  background-color: transparent;
+  border: solid 1px rgb(165, 165, 165);
+  padding: 0 .5rem;
+  margin-left: 90%;
+}
+
+.notification{
+  margin: auto;
+  padding: 1rem 4rem;
+  border: solid 1px rgb(165, 165, 165);
+}
+
+.notification h1{
+    font-size: 15px;
   }
-  to {
-    transform: rotate(360deg);
-  }
+
+.notification h2{
+  padding: 0;
+  margin: 0;
+  font-size: 15px;
+  color:rgb(165, 165, 165);
+}
+
+.alert {
+  background-color: #ebc8c471;
+}
+
+.info{
+  background-color: #cce8f555;
+}
+
+.warning {
+  background-color: #F8F3D6;
+}
+
+.success{
+  background-color: #DEF2D6;
 }

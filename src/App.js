@@ -1,24 +1,22 @@
-import logo from './logo.svg';
+import React from "react";
 import './App.css';
 
 function App() {
+  const closeNotification = () => {
+    // send userID, notification type
+    console.log("hey")
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+  <div className="main">
+   <h1>RANDOM NOTIFICATIONS</h1>
+   <p>For your consideration: <br></br> Zachary Gould</p>
+   <div className="notification alert">
+    <button onClick={closeNotification}><h2>x</h2></button>
+    <h1>This is a notification</h1>
+    <p>You have been notified</p>
+   </div>
+  </div>
   );
 }
 
