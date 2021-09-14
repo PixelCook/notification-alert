@@ -18,11 +18,11 @@ function App() {
     sendData(userID, notification);
   };
 
-  const clock = () => {
+  const clock = (length, timeout) => {
      setInterval(function() {
-      setIndex(Math.floor(Math.random() * notifications.length-1)+1);
+      setIndex(Math.floor(Math.random() * length-1)+1);
       console.log("testing", randomTimeout)
-    }, 1000)
+    }, timeout*1000)
     }
  
   useEffect( () => {
@@ -31,8 +31,9 @@ function App() {
       setRandomTimeout(response.data.timeout);
       setDuration(response.data.duration);
       setLoader(false);
+      clock(response.data.notifications.length, response.data.timeout)
     })
-    clock()
+  
    
   }, [])
 
