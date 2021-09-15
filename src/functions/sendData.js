@@ -1,9 +1,11 @@
 import axios from "axios";
 
-const sendData = async (userID) => {
+const sendData = async (userID, notification) => {
   try {
-    const response = await axios.post("/noted")
-    console.log(response.data);
+    await axios.post("/noted", {
+      user: userID,
+      notification: notification
+    })
   }catch(error){
     console.log(error)
   }
